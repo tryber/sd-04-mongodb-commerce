@@ -8,4 +8,3 @@ db.produtos
     { criadoPor: "Ronald McDonald" },
     { _id: 0, nome: 1, criadoPor: 1 }
   ).pretty();
-
