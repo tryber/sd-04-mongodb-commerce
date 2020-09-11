@@ -1,0 +1,8 @@
+//  O Operador $addToSet add o valor na array se esse valor não existir na array. Se já existir o valor, nada acontece.
+db.produtos.updateMany(
+  { nome: { $ne: "McChicken" } },
+  { $addToSet: { ingredientes: "ketchup" } },
+);
+
+db.produtos.find({}, { _id: 0, nome: 1, ingredientes: 1 }).pretty();
+
