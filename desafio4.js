@@ -14,9 +14,11 @@ db.produtos.updateOne(
 
 // Crie uma query que retorne o nome de todos os documentos em que o campo ultimaModificacao existe
 
-db.produtos.find(
+db.produtos
+  .find(
     {
       ultimaModificacao: { $exists: true },
     },
     { _id: false, nome: true }
-  ).pretty();
+  )
+  .pretty();

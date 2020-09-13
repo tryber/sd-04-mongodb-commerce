@@ -15,4 +15,6 @@ db.produtos.updateMany(
 // Crie uma query que retorne o nome e valoresNutricionais de
 // todos os documentos.
 
-db.produtos.find({}, { _id: false, nome: true, valoresNutricionais: true }).pretty();
+db.produtos
+  .find({}, { _id: false, nome: true, valoresNutricionais: true })
+  .pretty();
