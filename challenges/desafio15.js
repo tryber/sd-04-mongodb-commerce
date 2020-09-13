@@ -1,0 +1,1 @@
+db.produtos.find({'nome' : /[Mm][Cc]/ }).count()
