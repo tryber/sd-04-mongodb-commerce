@@ -29,4 +29,4 @@ db.produtos.updateMany(
 
 // Crie uma query que retorne o nome e vendasPorDia de todos os documentos.
 
-db.produtos.find({}, { _id: false, nome: true, vendasPorDia: true }).pretty();
+db.produtos.find({}, { _id: false, nome: true, vendasPorDia: true });

@@ -5,4 +5,4 @@ db.produtos.update(
   true
 );
 
-db.produtos.find({}, { _id: false, nome: true, valorUnitario: true }).pretty();
+db.produtos.find({}, { _id: false, nome: true, valorUnitario: true });

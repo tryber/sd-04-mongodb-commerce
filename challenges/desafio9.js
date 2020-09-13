@@ -12,4 +12,4 @@ db.produtos.updateMany(
 
 // Crie uma query que retorne o nome e ingredientes de todos os documentos.
 
-db.produtos.find({}, { _id: false, nome: true, ingredientes: true }).pretty();
+db.produtos.find({}, { _id: false, nome: true, ingredientes: true });

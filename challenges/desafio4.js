@@ -20,5 +20,4 @@ db.produtos
       ultimaModificacao: { $exists: true },
     },
     { _id: false, nome: true }
-  )
-  .pretty();
+  );

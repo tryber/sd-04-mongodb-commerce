@@ -14,4 +14,4 @@ db.produtos.update(
   true
 );
 
-db.produtos.find({}, { _id: false, nome: true, avaliacao: true }).pretty();
+db.produtos.find({}, { _id: false, nome: true, avaliacao: true });

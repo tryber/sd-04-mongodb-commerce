@@ -16,5 +16,4 @@ db.produtos.updateMany(
 // todos os documentos.
 
 db.produtos
-  .find({}, { _id: false, nome: true, valoresNutricionais: true })
-  .pretty();
+  .find({}, { _id: false, nome: true, valoresNutricionais: true });
