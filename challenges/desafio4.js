@@ -11,4 +11,4 @@ db.produtos.updateOne(
   { $currentDate: { "ultimaModificacao": { $type: "timestamp" } } }
 );
 
-db.produtos.find({}, { nome: 1, ultimaModificacao: 1, _id: 0 });
+db.produtos.find({ ultimaModificacao: { $exists: true } }, { nome: 1, _id: 0 });
