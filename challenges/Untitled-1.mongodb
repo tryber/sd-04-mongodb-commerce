@@ -1,0 +1,145 @@
+
+use('commerce');
+
+db.produtos.find({"nome": {$regex: /MC/i}}).count();
+//db.produtos.find();
+
+// db.produtos.find(
+  
+//    { "valoresNutricionais": {$elemMatch: { "tipo": "sódio", "percentual": {$gt: 40}}}},
+//             {"_id":0, "nome":1, "valoresNutricionais":1}
+// );
+
+// db.produtos.updateMany(
+//   {
+//     "valoresNutricionais.tipo": {$all: [ "sódio" ]}
+//   },
+  
+//   {  
+//   $push: 
+//         {
+//             "tags": { $each: ["muito sódio"], $position: -1 }
+//         }
+//   }
+// );
+
+// db.produtos.updateMany(  
+//       {},
+//     {$push: {"valoresNutricionais": {$each: [], $sort: {"percentual": -1}}}}
+// )
+
+// db.produtos.find({}, {"_id":0, "valoresNutricionais":1});
+
+// db.produtos.updateMany(
+//     {},
+//     {
+//         $push: 
+//         {
+//             "tags": 
+//             {
+//                 $each: ["combo", "tasty"]
+//             }
+//         }
+//     }
+// )
+// db.produtos.find({}, {"_id":0, "nome":1, "vendasPorDia":1 })
+
+// db.produtos.update(
+//     {tags: "bovino"},
+//     {
+//        $set: {"vendasPorDia.6": 120}
+//     }
+// )
+
+//  db.produtos.update(
+//   { nome: "Big Mac" },
+//   {
+//     $push: {
+//       vendasPorDia: 
+//       { 
+//         $each: [60],
+//         $position: 4
+//       },
+//     },
+//   }
+// );
+
+// db.produtos.updateMany(
+//     {nome: "Big Mac" },
+//     {
+//         $unset: 
+//         {
+//           "vendasPorDia": []
+//         }
+//     }
+// );
+
+// db.produtos.update(
+//     {nome: "Big Mac" },
+//     {
+//         $push: 
+//         {
+//           "vendasPorDia": 
+//           { $each:
+//               [0,0,0,0,0,0,0,]
+//           },
+//         }
+//     }    
+// );
+
+// db.produtos.find(
+//     { $or: [
+//         {"nome": "Big Mac"},
+//         {"nome": "Quarteirão com Queijo"}
+//     ]});
+
+// db.produtos.update(
+//     {"nome": "Quarteirão com Queijo" },
+//     {
+//         $unset: {"ingredientes.0": 1}
+//     }
+// );
+
+// db.produtos.updateMany(
+//     {"nome": { $ne: "McChicken"}},
+//     { $addToSet: {"ingredientes": "ketchup"}}
+// );
+
+// db.produtos.updateMany(
+//     {"nome":"Big Mac"},
+//     {
+//         $set: { "ultimaModificacao": new Date() }
+//     }
+//     );
+
+// db.produtos.updateMany(
+//     {"tags":"ave"},
+//     {
+//         $inc: {"avaliacao": 3}
+//     }
+// );
+
+
+//Insere campo
+// db.produtos.updateMany(
+//     {},
+//     { 
+//     $set: {
+//       avaliacao: Numbetipo: 'sódio'rInt("0")
+//     }
+//     }
+// );
+
+// Remove campos
+// db.produtos.updateMany(
+//     {},
+//     { 
+//     $unset: {
+//       avaliacao: NumberInt("0")
+//     }
+//     }
+// );
+
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against proper database and collection.
