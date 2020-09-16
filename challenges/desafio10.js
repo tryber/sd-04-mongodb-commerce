@@ -4,6 +4,9 @@ db.produtos.updateMany({}, {$push: {vendasPorDia: {$each: [0, 0, 0, 0, 0, 0, 0]}
 // O primeiro item desse array representa as vendas no domingo, o segundo item representa as vendas na segunda-feira,
 // e assim até chegar ao último item, que representa as vendas no sábado.
 
+//Pode ser feito com $set também. Dica dada pelo Mathieu no CR --> https://github.com/tryber/sd-04-mongodb-commerce/pull/11
+//db.produtos.updateMany({}, {$set: {vendasPorDia: [0, 0, 0, 0, 0, 0, 0]}});
+
 // Crie uma query que incremente as vendas de Big Mac às quartas-feiras em 60.
 db.produtos.updateOne({nome: "Big Mac"}, {$inc: {"vendasPorDia.3": 60}});
 
