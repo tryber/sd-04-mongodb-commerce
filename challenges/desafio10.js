@@ -8,4 +8,3 @@
 // 2. Crie uma query que incremente as vendas de Big Mac às quartas-feiras em 60.
 // 3. Crie uma query que incremente as vendas de todos os sanduíches de carne do tipo bovino e pão aos sábados em 120.
 // 4. Crie uma query que retorne o nome e vendasPorDia de todos os documentos.
-
