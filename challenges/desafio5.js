@@ -1,5 +1,5 @@
 db.produtos.updateMany({
-    "nome": { $not: "McChicken" }
+    "nome": { $nin: ["McChicken"] }
 },
     { $addToSet: { "ingredientes": "ketchup" } }
 );
