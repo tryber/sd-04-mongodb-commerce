@@ -1,13 +1,15 @@
 db.produtos.updateMany(
-    {},
+    {
+        "valoresNutricionais.tipo": "sódio",
+        "valoresNutricionais.percentual": { $gte: 40 }
+    },
     {
         $push: {
-            "valoresNutricionais": {
-                $each: [],
-                $sort: { "percentual": -1 }
+            "tags": {
+                $each: ["muito sódio"],
             }
         },
     }
 );
 
-db.produtos.find({}, { _id: false, nome: 1, valoresNutricionais: 1 });
+db.produtos.find({}, { _id: false, nome: true, tags: true });
