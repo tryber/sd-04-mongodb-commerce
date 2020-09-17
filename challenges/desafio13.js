@@ -4,7 +4,7 @@ db.produtos.updateMany(
         "valoresNutricionais.percentual": { $gte: 40 }
     },
     {
-        $addToSet: {"tags": {"muito sódio"}},
+        $addToSet: {"tags": "muito sódio"},
     }
 );
 
