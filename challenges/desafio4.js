@@ -1,4 +1,5 @@
 db.produtos.update({"nome":"Big Mac"},{$currentDate:{"ultimaModificacao":{$type:"date"}}});
+db.produtos.find({"ultimaModificacao":{$exists:true}},{"nome":1,"_id":0});
 /* Desafio 4
 Atribua a data corrente ao campo ultimaModificacao no sanduíche Big Mac.
 Para isso, escreva no arquivo desafio4.js duas queries, nesta ordem:
