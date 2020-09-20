@@ -1,5 +1,5 @@
 db.prosutos.createIndex({"descricao":"text"},{default_language:"portuguese"});
-db.produtos.find({$text:{$search:"frango",$search:"hamburguer"}}).count();
+db.produtos.find({$text:{$search:"frango hamburguer"}}).count();
 /*Desafio 17
 Conte quantos documentos contêm as palavras frango e hamburguer utilizando o operador $text.
 Para isso, escreva no arquivo desafio17.js duas queries, nesta ordem:
