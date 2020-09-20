@@ -8,8 +8,8 @@ db.produtos.updateMany(
       }
     }
   );
-  
-  db.produtos.updateMany(
+
+db.produtos.updateMany(
     {
       nome: "Big Mac"
     },
@@ -20,7 +20,7 @@ db.produtos.updateMany(
     }
   );
   
-  db.produtos.updateMany(
+db.produtos.updateMany(
     {
       "tags.0": "bovino",
       "tags.1": "pão"
