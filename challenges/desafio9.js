@@ -7,4 +7,4 @@ db.produtos.updateOne(
     }
 );
 
-db.produtos.find({}, {_id: 0, nome: 1, ingredientes: 1}).pretty();
+db.produtos.find({}, {_id: 0, nome: 1, vendasPorDia: 1}).pretty();
