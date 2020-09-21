@@ -6,3 +6,6 @@
 
 # BSON data files
 assets/produtos.bson
+
+#NPM Modules
+node_modules
