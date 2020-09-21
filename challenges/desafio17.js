@@ -4,4 +4,3 @@ db.produtos.createIndex(
 );
 
 db.produtos.countDocuments({ $text: { $search: "frango hamburguer" } });
-gh pr create
