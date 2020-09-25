@@ -1,6 +1,6 @@
 db.produtos.updateMany(
   {"nome": {$nin: ["McChicken"]}},
-  {$addToSet: {ingredienes: "ketchup"}}
+  {$addToSet: {"ingredientes": "ketchup"}}
 );
 
 db.produtos.find(
